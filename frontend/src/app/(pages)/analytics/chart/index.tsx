@@ -19,7 +19,7 @@ export function TasksChart({ tasks }: { tasks: Report['tasksCreatedByDay'] }) {
             tickFormatter={(tick) => new Date(tick).toLocaleDateString()}
           />
           <YAxis dataKey='task_count' tick={{ fontSize: 14 }} allowDecimals={false} />
-          <Line dataKey='task_count' name='Created tasks' legendType='square' strokeWidth={5} />
+          <Line dataKey='task_count' name='Created tasks' legendType='square' strokeWidth={5} stroke='#48c71e' />
         </LineChart>
       </ResponsiveContainer>
     </div>

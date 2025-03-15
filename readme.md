@@ -74,7 +74,7 @@ The metrics I considered for this project are the following ones:
 
 # Design
 
-For the design, I tried following the design of Trello, where each task status has it's own column. There's not much to the analytics design, I just tried to make the infomation as easy as possible to read, with big letters and saturated colors.
+For the design, I used Trello as an inspiration (it's much simpler of course), where each task status has it's own column. There's not much to the analytics design, I just tried to make the infomation as easy as possible to read, with big letters and saturated colors.
 
 # Authentication
 
@@ -88,4 +88,8 @@ There's validation on both the frontend and the backend. In the backend, Adonis 
 
 Initialy I created the frontend and the backend separately, and then had to delete the .git folder from each one, so both are included in one repository. That's wht there's not many commit messages. In the backend, I remove the .env file from the .gitignore file, just so it is easier for you to start it. I'd never do it in a real project.
 
-The application supports user registration, but to make it easier to see something drawn right after starting the project, there are some seeders that populate the database with arround 40 tasks. They are from the user **lkuratani@erco.energy**, and the password is **safe_password** (not safe at all, but its for development only).
+The application supports user registration, but to make it easier to see something drawn right after starting the project, there are some seeders that populate the database with arround 40 tasks. They are from the user **lkuratani@erco.energy**, and the password is **safe_password** (not safe at all, but its for development only). The tasks seeder would probably not be used in production.
+
+There's plenty of room for improvements, that would have been done, had I more time. For example, it is missing the drag and drop feature, the user has to open the edit modal to edit the tasks status. Maybe implement more metrics in the analytics page. Definetly improve error handling and alerts.
+
+Feel free to contact me at *lucaskuratani@gmail.com* in case of any problems.
