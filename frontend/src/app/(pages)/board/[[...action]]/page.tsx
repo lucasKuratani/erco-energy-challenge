@@ -5,6 +5,7 @@ import { NewTaskModal } from '@/app/(pages)/board/new-task-modal'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { EditTaskModal } from '@/app/(pages)/board/edit-task-modal'
+import { DownloadButton } from '@/app/(pages)/board/[[...action]]/download-button'
 
 const statuses = [
   { name: 'To Do', icon: TbProgress },
@@ -28,14 +29,17 @@ export default async function Page({ params }: { params: Promise<{ action: strin
     >
       {action?.[0] === 'new' && <NewTaskModal />}
       {action?.[0] === 'edit' && <EditTaskModal id={Number(action?.[1])} />}
-      <Link href='/board/new'>
-        <button
-          type='button'
-          className='cursor-pointer rounded-lg bg-emerald-600 p-2 text-white transition-all hover:scale-[105%] hover:bg-emerald-500'
-        >
-          Create new task
-        </button>
-      </Link>
+      <div className='flex justify-between'>
+        <Link href='/board/new'>
+          <button
+            type='button'
+            className='cursor-pointer rounded-lg bg-emerald-600 p-2 text-white transition-all hover:bg-emerald-500'
+          >
+            Create new task
+          </button>
+        </Link>
+        <DownloadButton tasks={tasks} />
+      </div>
       <div className='mt-8 grid grid-cols-4 gap-x-8'>
         {statuses.map((status) => (
           <div key={status.name} className='flex flex-col gap-y-4 rounded-lg bg-neutral-200 p-8 shadow-lg'>
