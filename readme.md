@@ -44,7 +44,9 @@ cd frontend
 
 npm install
 
-npm run dev
+npm run build
+
+npm run start
 ```
 
 Install the dependencies, seed the database and start the backend:
