@@ -1,9 +1,27 @@
-# How to install the project
+# Erco Energy - Mid Level Fullstack Developer Challenge
+
+![Login](images/login.png)
+![Board](images/board.png)
+![Analytics](images/analytics.png)
+
+## How to install the project
 
 Requirements:
 
 - Node.js version 20 or higher
 - Docker
+
+---
+
+Stack chosen and why:
+
+The programming language used it Typescript and it runs in Node.js.
+
+The frontend is made with Next.js version 15, and it makes use of awesome features like server actions, server components and mostly server side rendering. For styling, I use Tailwind, it is realy good. The charting library chosen is Rechart and the reason is just that I use it at work. It's good though, very flexible and modular, made for React.
+
+The backend is made with AdonisJS, a fully fledged MVC framework. Its just like NestJS, but much more fun to work with. It comes out of the box with routing, database support, and ORM (lucid), authentication, etc.
+
+The chosen database is MySQL. There is not much to this choice, it's just the one I'm most used to work with. 
 
 ---
 
@@ -29,7 +47,7 @@ npm install
 npm run dev
 ```
 
-Install the dependencies, seed the database and start the backend:  
+Install the dependencies, seed the database and start the backend:
 
 ```bash
 cd backend
@@ -37,6 +55,8 @@ cd backend
 npm install
 
 node ace migration:run
+
+node ace db:seed
 
 node ace serve --watch
 ```
@@ -59,7 +79,11 @@ For the design, I tried following the design of Trello, where each task status h
 The authentication is managed entirely by AdonisJS. According to [Adonis's documentation]('https://docs.adonisjs.com/guides/authentication/access-tokens-guard'), the tokens are not considered JWT, but rather opaque, since they do not follow the JWT standard, because Adonis implements its own token generation logic. Although its not considered JWT, the authentication flow would be the same if it was.
 
 # Validation
+
 There's validation on both the frontend and the backend. In the backend, Adonis uses a library called Vine. Next.js does not come with a built in validator, so I chose to use Zod.
 
 # Conclusion
+
 Initialy I created the frontend and the backend separately, and then had to delete the .git folder from each one, so both are included in one repository. That's wht there's not many commit messages. In the backend, I remove the .env file from the .gitignore file, just so it is easier for you to start it. I'd never do it in a real project.
+
+The application supports user registration, but to make it easier to see something drawn right after starting the project, there are some seeders that populate the database with arround 40 tasks. They are from the user **lkuratani@erco.energy**, and the password is **safe_password** (not safe at all, but its for development only).
