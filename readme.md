@@ -25,8 +25,6 @@ The chosen database is MySQL. There is not much to this choice, it's just the on
 
 ## How to install the project
 
----
-
 Clone the repository:
 
 ```bash
