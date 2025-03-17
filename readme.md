@@ -74,7 +74,7 @@ The metrics I considered for this project are the following ones:
 
 # Design
 
-For the design, I used Trello as an inspiration (it's much simpler of course), where each task status has it's own column. There's not much to the analytics design, I just tried to make the infomation as easy as possible to read, with big letters and saturated colors.
+For the design, I used Trello as an inspiration (it's much simpler of course), where each task status has its own column. There's not much to the analytics design, I just tried to make the infomation as easy as possible to read, with big letters and saturated colors.
 
 # Authentication
 
